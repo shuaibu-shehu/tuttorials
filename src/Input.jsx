@@ -24,6 +24,7 @@ function Input() {
               isComplete: false,
           },
       ])
+      setValue('')
   }
 
   return<div style={{

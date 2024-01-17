@@ -55,3 +55,9 @@
   font-size: 1rem;
   outline: none;
 }
+
+.list-item{
+  display: "flex";
+  gap: "10px";
+  margin: "10px";
+}

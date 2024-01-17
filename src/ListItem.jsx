@@ -8,7 +8,7 @@ function ListItem({ list }) {
   const deleteItem = (id) => {
     setTodoList(todoList.filter((item) => item.id !== id));
   };
-  
+
   console.log(todoList);
 
   const onChange = (id) => {
@@ -22,14 +22,25 @@ function ListItem({ list }) {
   return (
     <div
       style={{
+        width:'50%',
         display: "flex",
         gap: "10px",
-        margin: "10px",
+        margin: "20px auto",
+        alignItems: "center",
+
       }}
+      className="list-item"
     >
       <input type="checkbox" checked={list.isComplete} onChange={()=>onChange(list.id)} />
       <p>{list.text}</p>
-      <button onClick={()=>deleteItem(list.id)}>delete</button>
+      <button style={{
+          backgroundColor:'red',
+          color:'white',
+          border:'none',
+          padding:'5px 10px',
+          borderRadius:'5px',
+          cursor:'pointer'
+      }} onClick={()=>deleteItem(list.id)}>delete</button>
     </div>
   );
 }
